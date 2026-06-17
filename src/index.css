@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-sam-bg font-sans text-white antialiased;
+    overflow-x: hidden;
+  }
+
+  body.episode-pastel {
+    background-color: #fff4b8;
+    color: #5c4a42;
+  }
+
+  body.episode-storybook {
+    background-color: #fff5eb;
+    color: #1f1528;
+  }
+
+  ::selection {
+    background: rgba(229, 9, 20, 0.4);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0b0b0b;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #e50914;
+  }
+}
+
+@layer utilities {
+  .text-gradient-red {
+    @apply bg-gradient-to-r from-white via-white to-sam-red bg-clip-text text-transparent;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Force hide any shadow/reflection canvases created by react-pageflip */
+  .storybook-flip canvas {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
