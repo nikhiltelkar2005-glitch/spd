@@ -579,7 +579,7 @@ export default function Storybook() {
 
   return (
     <div className="relative flex min-h-screen flex-col items-center overflow-hidden bg-gradient-to-br from-romance-lavender via-romance-pink to-romance-peach">
-      <audio ref={audioRef} src="/episode2_bgm.webm" loop />
+      <audio ref={audioRef} src="/ep1.mp3" loop />
       {/* Ambient floating hearts */}
       <FloatingHearts />
 
