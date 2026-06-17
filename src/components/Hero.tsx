@@ -95,7 +95,7 @@ export default function Hero() {
           className="mt-6 text-sm text-sam-muted"
         >
           <span className="text-white/60">Created by</span>{" "}
-          <span className="font-medium text-white">Meows</span>
+          <span className="font-medium text-white">Nick</span>
         </motion.div>
 
         <motion.div

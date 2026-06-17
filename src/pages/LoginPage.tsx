@@ -11,8 +11,6 @@ export default function LoginPage() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const from = (location.state as any)?.from?.pathname || "/";
-
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     const validUsers: Record<string, string> = {
@@ -23,7 +21,7 @@ export default function LoginPage() {
     if (validUsers[email] === password) {
       setError(false);
       login();
-      navigate(from, { replace: true });
+      navigate("/", { replace: true });
     } else {
       setError(true);
     }

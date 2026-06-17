@@ -195,7 +195,7 @@ export default function GenericEpisodePage() {
           "I wish you nothing but blueprints that build success, paths that bring endless laughter, and a life surrounded by kittens, puppies, and dreams fulfilled.",
           "You deserve the world.",
           "Always,",
-          "Meows ♥"
+          "Nick♥"
         ];
 
         // Typewriter effect lines reveal
