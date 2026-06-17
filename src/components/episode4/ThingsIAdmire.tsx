@@ -48,24 +48,6 @@ function FloatingStars({ count = 12 }: { count?: number }) {
   );
 }
 
-function FloatingNotes() {
-  const notes = ["♩", "♪", "♫", "♬", "🎵"];
-  return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      {Array.from({ length: 8 }).map((_, i) => (
-        <motion.span
-          key={i}
-          className="absolute select-none text-purple-300/70"
-          style={{ left: `${10 + (i * 79) % 80}%`, top: `${5 + (i * 59) % 80}%`, fontSize: `${14 + (i % 3) * 5}px` }}
-          animate={{ y: [0, -35, 0], x: [0, (i % 2 ? 10 : -10), 0], opacity: [0.2, 0.8, 0.2], rotate: [0, (i % 2 ? 15 : -15), 0] }}
-          transition={{ duration: 3.5 + i * 0.5, delay: i * 0.45, repeat: Infinity }}
-        >
-          {notes[i % notes.length]}
-        </motion.span>
-      ))}
-    </div>
-  );
-}
 
 function RoomWrap({ gradient, children, extraBg }: { gradient: string; children: React.ReactNode; extraBg?: React.ReactNode }) {
   return (

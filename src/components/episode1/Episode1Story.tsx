@@ -4,10 +4,7 @@ import {
   ArrowLeft,
   BookOpen,
   Briefcase,
-  Cat,
-  Dog,
   Heart,
-  Home,
   Mountain,
   Play,
   School,
@@ -146,29 +143,6 @@ function FriendshipAnimation() {
   );
 }
 
-function PetAnimations() {
-  return (
-    <div className="relative flex h-40 items-end justify-center gap-12">
-      <motion.div animate={{ x: [0, 20, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-        <Cat className="text-purple-600 drop-shadow-md" size={56} strokeWidth={2} />
-      </motion.div>
-      <motion.div animate={{ y: [0, -15, 0] }} transition={{ duration: 1.2, repeat: Infinity }}>
-        <Dog className="text-orange-500 drop-shadow-md" size={60} strokeWidth={2} />
-      </motion.div>
-      {["🐾", "🐾", "🐾"].map((p, i) => (
-        <motion.span
-          key={i}
-          className="absolute text-2xl text-gray-700 opacity-80"
-          style={{ left: `${35 + i * 15}%`, bottom: `${40 + i * 10}%` }}
-          animate={{ y: [0, -10, 0], opacity: [0.5, 1, 0.5] }}
-          transition={{ duration: 2, delay: i * 0.4, repeat: Infinity }}
-        >
-          {p}
-        </motion.span>
-      ))}
-    </div>
-  );
-}
 
 function MountainClimb() {
   const progress = [0.3, 0.5, 0.7, 1];
