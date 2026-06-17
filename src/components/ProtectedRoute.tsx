@@ -6,7 +6,8 @@ export default function ProtectedRoute() {
   const location = useLocation();
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
+    // Always redirect to home after login, not back to a specific episode
+    return <Navigate to="/login" state={{ from: { pathname: "/" } }} replace />;
   }
 
   return <Outlet />;

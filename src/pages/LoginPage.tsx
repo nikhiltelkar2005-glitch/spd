@@ -11,6 +11,8 @@ export default function LoginPage() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const from = (location.state as any)?.from?.pathname || "/";
+
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     const validUsers: Record<string, string> = {
